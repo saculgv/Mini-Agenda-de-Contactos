@@ -26,6 +26,7 @@ while True:
         elif opcion == 3:
             os.system("cls")
             print("Buscar un contacto por nombre.")
+            buscar_contacto(contactos)
 
         elif opcion == 4:
             os.system("cls")
