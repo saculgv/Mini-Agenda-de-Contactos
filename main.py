@@ -1,8 +1,9 @@
 import os, time
+from functions import *
 os.system("cls")
 
 while True:
-
+    os.system("cls")
     print("\t\t Mini Agenda de Contactos\n")
     print("1)  Agregar un contacto: nombre, teléfono, email.")
     print("2)  Listar contactos: mostrar todos los contactos guardados.")
@@ -17,11 +18,11 @@ while True:
         if opcion == 1:
             os.system("cls")
             print("Agregar un contacto:")
-
+            agregar_contacto(contactos)
         elif opcion == 2:
             os.system("cls")
             print("Listar contactos:")
-
+            listar_contacto(contactos)
         elif opcion == 3:
             os.system("cls")
             print("Buscar un contacto por nombre.")
