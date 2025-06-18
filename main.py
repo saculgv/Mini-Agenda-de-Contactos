@@ -31,6 +31,7 @@ while True:
         elif opcion == 4:
             os.system("cls")
             print("Eliminar un contacto.")
+            eliminar_contacto(contactos)
 
         elif opcion == 5:
             os.system("cls")
@@ -43,3 +44,4 @@ while True:
 
     except:
         print("El valor ingresado debe ser numerico")
+        time.sleep(2)
