@@ -58,3 +58,23 @@ def listar_contacto(contactos):
         for contacto in range(len(contactos)):
             print(contactos[contacto])
     os.system("Pause")
+
+def buscar_contacto(contactos):
+    if len(contactos) == 0:
+        os.system("cls")
+        print("Primero ingrese un contacto.")
+        time.sleep(2)
+    else:
+        buscar = input("Ingrese el nombre que desea buscar:\n").lower().strip()
+        encontrados = []
+        for contacto in contactos:
+            if buscar in contacto[0]:
+                encontrados.append(contacto)
+        os.system("cls")
+        if encontrados:
+            print("Contactos encontrados:\n")
+            for contacto in encontrados:
+                print(contacto)
+        else:
+            print("No se encontraron contactos con ese nombre.")
+        os.system("Pause")
