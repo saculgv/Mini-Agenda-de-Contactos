@@ -78,3 +78,22 @@ def buscar_contacto(contactos):
         else:
             print("No se encontraron contactos con ese nombre.")
         os.system("Pause")
+
+def eliminar_contacto(contactos):
+    if len(contactos) == 0:
+        os.system("cls")
+        print("Primero ingrese un contacto.")
+        time.sleep(2)
+    else:
+        bandera = False
+        eliminar = input("Ingrese el nombre del contacto que desea eliminar:\n").lower().strip()
+        for contacto in contactos:
+            if eliminar in contacto[0]:
+                contactos.remove(contacto)
+                print("Contacto eliminado correctamente!")
+                bandera = True
+                time.sleep(2)
+        if bandera == False:
+            print("No se han encontrado coincidencias para eliminar.")
+            time.sleep(2)
+        os.system("Pause")
